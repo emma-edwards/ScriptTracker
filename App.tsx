@@ -19,7 +19,8 @@ const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   tabBar: {
     flex: 1,
-    backgroundColor: '#222',
+    padding: 10,
+    margin: 'auto',
   }
 })
 
@@ -65,7 +66,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={styles.TabBar}
+            style={styles.tabBar}
           >
             <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
               {label}
