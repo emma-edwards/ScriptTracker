@@ -6,7 +6,7 @@ import { Text, Button, Card } from 'react-native-paper';
 import { withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 import { Authenticator } from 'aws-amplify-react-native'
 
-const userSelector = (context) => [context.user]
+/* const userSelector = (context) => [context.user]
 
 const SignOutButton = () => {
   const { user, signOut } = useAuthenticator(userSelector);
@@ -16,12 +16,12 @@ const SignOutButton = () => {
       <Authenticator usernameAttributes='email'/>
     </Pressable>
   )
-};
+}; */
 
 function HomeScreen({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text variant="displayMedium">Welcome, {userSelector.email}</Text>
+      <Text variant="displayMedium">Welcome, User</Text>
       <Card>
         <Card.Title title="Card Title" subtitle="Card Subtitle" />
             <Card.Content>
@@ -29,7 +29,6 @@ function HomeScreen({navigation}) {
               <Text variant="bodyMedium">Card content</Text>
             </Card.Content>
       </Card>
-      <SignOutButton />
     </View>
   );
 }

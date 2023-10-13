@@ -7,11 +7,11 @@ import { Provider as PaperProvider, Button, Text as PaperText } from 'react-nati
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-ionicons'
 
-import HomeScreen from "./screens/HomeScreen.tsx";
-import Profile from "./screens/Profile.tsx";
-import Settings from "./screens/Settings.tsx";
-import Calendar from "./screens/Calendar.tsx";
-import Medications from "./screens/Medications.tsx";
+import HomeScreen from "../screens/HomeScreen.tsx";
+import Profile from "../screens/Profile.tsx";
+import Settings from "../screens/Settings.tsx";
+import Calendar from "../screens/Calendar.tsx";
+import Medications from "../screens/Medications.tsx";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
