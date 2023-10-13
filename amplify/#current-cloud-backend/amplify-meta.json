@@ -1,0 +1,87 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-scripttracker-dev-185608-authRole",
+      "UnauthRoleArn": "arn:aws:iam::402101553497:role/amplify-scripttracker-dev-185608-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::402101553497:role/amplify-scripttracker-dev-185608-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-scripttracker-dev-185608-deployment",
+      "UnauthRoleName": "amplify-scripttracker-dev-185608-unauthRole",
+      "StackName": "amplify-scripttracker-dev-185608",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:402101553497:stack/amplify-scripttracker-dev-185608/bc9d5710-3c12-11ee-9315-0637da3d92de",
+      "AmplifyAppId": "d2l0l4x1z80eza"
+    }
+  },
+  "api": {
+    "scripttracker": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "i452tooelbbk5nj7ku3kvbhn6a",
+        "GraphQLAPIEndpointOutput": "https://b6a4jqqdxngrtkjjmlw2t47lbe.appsync-api.ap-southeast-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-niv7uh4qfjhqbbsapiyvgmetdi"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-scripttracker-dev-185608-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiscripttracker"
+      },
+      "lastPushTimeStamp": "2023-09-10T10:57:23.247Z",
+      "lastPushDirHash": "JnJAHnhRED8s0uoruaPQDDK/mLc="
+    }
+  },
+  "auth": {
+    "scripttrackerfc5d8ecf": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-scripttracker-dev-185608-deployment/amplify-cfn-templates/auth/scripttrackerfc5d8ecf-cloudformation-template.json",
+        "logicalId": "authscripttrackerfc5d8ecf"
+      },
+      "lastPushTimeStamp": "2023-09-10T10:57:24.196Z",
+      "output": {
+        "UserPoolId": "ap-southeast-2_hJ9QMRCn6",
+        "AppClientIDWeb": "5eg3jijsk712kvajq9scrg3ddj",
+        "AppClientID": "1q37g65bj6d3bj9j6n5ep91cbg",
+        "IdentityPoolId": "ap-southeast-2:833f560c-9c20-436d-89f1-3f8ad3c4f500",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-southeast-2:402101553497:userpool/ap-southeast-2_hJ9QMRCn6",
+        "IdentityPoolName": "scripttrackerfc5d8ecf_identitypool_fc5d8ecf__dev",
+        "UserPoolName": "scripttrackerfc5d8ecf_userpool_fc5d8ecf"
+      },
+      "lastPushDirHash": "dSxSBVbj70SgbkKmXiGxYNiBnjo="
+    }
+  }
+}
