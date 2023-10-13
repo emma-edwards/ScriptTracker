@@ -1,12 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Dimensions } from 'react-native';
 import { Amplify } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react-native';
+import { withAuthenticator, Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
+import { Auth } from 'aws-amplify';
+
+function SignOutButton() {
+  const { signOut } = useAuthenticator();
+  return <Button title="Sign Out" onPress={signOut} />;
+}
 
 function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+      {/* <Authenticator>
+        <SignOutButton />
+      </Authenticator> */}
+
   );
 }
 const styles = StyleSheet.create({
@@ -17,4 +24,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
 export default withAuthenticator(App);
